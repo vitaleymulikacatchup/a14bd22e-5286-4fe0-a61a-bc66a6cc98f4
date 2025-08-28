@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Playfair_Display } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import "./globals.css";
 
@@ -9,15 +9,9 @@ const interTight = Inter_Tight({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
 export const metadata: Metadata = {
   title: "NovaLens Studio",
-  description: "Showcase futuristic photography and enable print/commission inquiries.",
+  description: "Showcasing futuristic photography and enabling inquiries.",
 };
 
 export default function RootLayout({
@@ -25,7 +19,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${playfairDisplay.variable} antialiased`}>
+      <body className={`${interTight.variable} antialiased`}>
         <SiteThemeProvider theme={{ styleVariant: 'futuristicAndOutOfBox', colorTemplate: 2, textAnimation: 'slide' }}>
           {children}
         </SiteThemeProvider>

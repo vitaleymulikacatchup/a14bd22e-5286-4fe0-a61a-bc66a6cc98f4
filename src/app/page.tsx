@@ -1,81 +1,78 @@
 "use client";
 import NavbarBase from '@/components/navigation/NavbarBase';
 import BillboardHero from '@/components/sections/layouts/hero/BillboardHero';
-import SplitAbout from '@/components/sections/layouts/about/SplitAbout';
+import TextboxStandard from '@/components/textbox/TextboxStandard';
 import HowToBuy3D from '@/components/sections/layouts/howtobuy/3DHTB';
 import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
 import BentoMediaGallery from '@/components/bento/BentoMediaGallery/BentoMediaGallery';
 import FooterBase from '@/components/footer/FooterBase';
 
 export default function Home() {
-  const navbarProps = {
-    brand: "NovaLens",
-    brandHref: "#hero",
-    leftActionLabel: "Menu",
-    rightActionLabel: "Contact",
-    onLeftAction: () => console.log('Menu clicked'),
-    onRightAction: () => console.log('Contact clicked'),
-  };
-
-  const heroProps = {
-    title: "Explore The Future of Photography",
-    subtitle: "Capturing stunning visuals with a modern twist.",
-  };
-
-  const aboutProps = {
-    description: "At NovaLens Studio, we embrace the art of photography, focusing on innovative techniques to bring visuals to life while maintaining a connection with nature.",
-  };
-
-  const howToBuyProps = {
-    title: "How to Book a Session",
-    steps: [
-      { title: "Choose a Package", description: "Select the photography package that suits your needs.", image: "/images/placeholder1.avif", position: "left", isCenter: false },
-      { title: "Set Your Date", description: "Contact us to set your preferred shooting date.", image: "/images/placeholder2.avif", position: "center", isCenter: true },
-      { title: "Capture Memories", description: "Enjoy a memorable photography experience!", image: "/images/placeholder3.avif", position: "right", isCenter: false },
-    ],
-  };
-
-  const tokenProps = {
-    title: "Key Features",
-    description: "Here are some key highlights of our services:",
-    tokenData: [
-      { value: "High Quality", description: "We ensure top-notch photography utilizing advanced techniques." },
-      { value: "Personalized Experience", description: "Each session is customized to fit your vision." },
-      { value: "Timely Delivery", description: "Your beautiful photos will be delivered promptly!" },
-    ],
-  };
-
-  const galleryProps = {
-    items: [
-      { title: "Forest Adventure", image: "/images/forest.jpg" },
-      { title: "Urban Nights", image: "/images/placeholder1.avif" },
-      { title: "Serene Landscapes", image: "/images/placeholder2.avif" },
-      { title: "Captivating Portraits", image: "/images/placeholder3.avif" },
-    ],
-  };
-
-  const footerProps = {
-    logoSrc: "/images/logo.svg",
-    logoWidth: 120,
-    logoHeight: 60,
-    columns: [
-      { title: "Services", items: [{ label: "Photography Inquiry", onClick: () => console.log('Inquiry') }] },
-      { title: "Follow Us", items: [{ label: "Instagram", onClick: () => console.log('Instagram') }] },
-      { title: "Contact", items: [{ label: "Support", onClick: () => console.log('Support') }] },
-    ],
-    copyrightText: "© 2025 NovaLens Studio",
-    onPrivacyClick: () => console.log('Privacy Policy Clicked'),
-  };
-
   return (
     <>
-      <NavbarBase {...navbarProps} />
-      <BillboardHero {...heroProps} />
-      <SplitAbout {...aboutProps} />
-      <HowToBuy3D {...howToBuyProps} />
-      <TextGridTokenomics {...tokenProps} />
-      <BentoMediaGallery {...galleryProps} />
-      <FooterBase {...footerProps} />
+      <NavbarBase 
+        logoSrc="/images/logo.svg" 
+        logoAlt="NovaLens Logo" 
+        leftButtonText="Menu" 
+        rightButtonText="Contact Us"
+        onLeftButtonClick={() => {}} 
+        onRightButtonClick={() => {}} 
+        className="fixed top-0 left-0 right-0 z-50"
+      />
+
+      <BillboardHero 
+        title="Discover Futuristic Photography" 
+        subtitle="Capturing the essence of the unknown, one shot at a time." 
+      />
+
+      <TextboxStandard 
+        title={<h1 className="text-3xl font-bold">About NovaLens Studio</h1>} 
+        description={<p className="mt-4">We are dedicated to exploring and showcasing the beauty of futuristic photography. Join us on a journey through the lens.</p>} 
+      />
+
+      <HowToBuy3D 
+        heading="How to Commission a Print" 
+        items={[
+          { title: "1. Select Your Photo", description: "Browse our collection and select your desired image.", image: "/images/placeholder1.avif" },
+          { title: "2. Choose Your Format", description: "Decide how you’d like your print to be presented.", image: "/images/placeholder2.avif" },
+          { title: "3. Place Your Order", description: "Fill out your details and enjoy the artwork!", image: "/images/placeholder3.avif" }
+        ]} 
+      />
+
+      <TextGridTokenomics 
+        title="Our Vision" 
+        description="What drives us." 
+        tokenData={[
+          { value: "Innovation", description: "Constantly pushing the boundaries of creativity." },
+          { value: "Quality", description: "Ensuring every piece meets our high standards." },
+          { value: "Community", description: "Building a strong network of photography enthusiasts." }
+        ]} 
+      />
+
+      <BentoMediaGallery 
+        items={[
+          { title: "Gallery Image 1", image: "/images/placeholder4.avif" },
+          { title: "Gallery Image 2", image: "/images/placeholder5.avif" },
+          { title: "Gallery Image 3", image: "/images/placeholder6.avif" },
+          { title: "Gallery Image 4", image: "/images/placeholder7.avif" }
+        ]} 
+      />
+
+      <FooterBase 
+        logoSrc="/images/logo.svg" 
+        logoAlt="NovaLens Logo" 
+        columns={[{
+          title: "Find Us",
+          items: [
+            { label: "Instagram", onClick: () => {} },
+            { label: "Facebook", onClick: () => {} },
+            { label: "Twitter", onClick: () => {} }
+          ]
+        }]} 
+        copyrightText="© 2025 NovaLens. All rights reserved." 
+        onPrivacyClick={() => {}} 
+        className="bg-gray-800 text-white"
+      />
     </>
   );
 }

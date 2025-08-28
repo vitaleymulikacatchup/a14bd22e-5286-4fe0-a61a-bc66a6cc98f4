@@ -2044,23 +2044,21 @@
         }
       },
       "propsSchema": {
-        "brand": "string",
-        "brandHref": "string",
-        "logo": "ReactNode",
-        "leftActionLabel": "string",
-        "rightActionLabel": "string",
-        "onLeftAction": "() => void",
-        "onRightAction": "() => void",
-        "rightActionHref": "string",
-        "leftActionHref": "string",
-        "sticky": "boolean",
-        "transparent": "boolean",
-        "elevated": "boolean",
-        "className": "string",
-        "containerClassName": "string",
-        "brandClassName": "string",
-        "leftActionClassName": "string",
-        "rightActionClassName": "string"
+        "logoSrc": "string";
+        "logoAlt": "string";
+        "leftButtonText": "string";
+        "rightButtonText": "string";
+        "onLeftButtonClick": "() => void";
+        "onRightButtonClick": "() => void";
+        "className": "string";
+        "containerClassName": "string";
+        "logoClassName": "string";
+        "buttonClassName": "string";
+        "buttonContentClassName": "string";
+        "buttonBgColor": "string";
+        "buttonHoverBgColor": "string";
+        "buttonTextColor": "string";
+        "buttonHoverTextColor": "string";
       }
     },
     {
