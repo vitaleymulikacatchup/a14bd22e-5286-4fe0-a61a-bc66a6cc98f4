@@ -23,16 +23,15 @@ export default function Home() {
   };
 
   const aboutProps = {
-    heading: "About Us",
-    body: "At NovaLens Studio, we embrace the art of photography, focusing on innovative techniques to bring visuals to life while maintaining a connection with nature.",
+    description: "At NovaLens Studio, we embrace the art of photography, focusing on innovative techniques to bring visuals to life while maintaining a connection with nature.",
   };
 
   const howToBuyProps = {
-    heading: "How to Book a Session",
-    items: [
-      { title: "Choose a Package", description: "Select the photography package that suits your needs." },
-      { title: "Set Your Date", description: "Contact us to set your preferred shooting date." },
-      { title: "Capture Memories", description: "Enjoy a memorable photography experience!" },
+    title: "How to Book a Session",
+    steps: [
+      { title: "Choose a Package", description: "Select the photography package that suits your needs.", image: "/images/placeholder1.avif", position: "left", isCenter: false },
+      { title: "Set Your Date", description: "Contact us to set your preferred shooting date.", image: "/images/placeholder2.avif", position: "center", isCenter: true },
+      { title: "Capture Memories", description: "Enjoy a memorable photography experience!", image: "/images/placeholder3.avif", position: "right", isCenter: false },
     ],
   };
 
@@ -48,10 +47,10 @@ export default function Home() {
 
   const galleryProps = {
     items: [
-      { title: "Forest Adventure", image: "images/forest.jpg" },
-      { title: "Urban Nights", image: "images/placeholder1.avif" },
-      { title: "Serene Landscapes", image: "images/placeholder2.avif" },
-      { title: "Captivating Portraits", image: "images/placeholder3.avif" },
+      { title: "Forest Adventure", image: "/images/forest.jpg" },
+      { title: "Urban Nights", image: "/images/placeholder1.avif" },
+      { title: "Serene Landscapes", image: "/images/placeholder2.avif" },
+      { title: "Captivating Portraits", image: "/images/placeholder3.avif" },
     ],
   };
 
